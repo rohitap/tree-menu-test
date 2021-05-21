@@ -16,6 +16,9 @@ const TreeItem = ({ title, children, url, searchData, showElement }) => {
 TreeItem.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.arrayOf(object),
+  url: PropTypes.string.isRequired,
+  searchData: PropTypes.object,
+  showElement: PropTypes.bool.isRequired
 }
 
 export default React.memo(TreeItem);
