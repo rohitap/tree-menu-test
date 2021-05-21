@@ -77,8 +77,12 @@
 }
 
 .custom-input {
-  margin-left: 34px;
+  margin-left: 49px;
   margin-top: 12px;
   padding: 6px;
   width: 250px;
+}
+
+.error {
+  color: red;
 }
