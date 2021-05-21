@@ -2,6 +2,7 @@ import TreeView from './TreeView';
 import { useState, useRef, useCallback } from 'react';
 import debounce from './utils/debounce';
 import { search } from './utils/helper';
+import PropTypes, { object } from 'prop-types';
 
 const TreeContainer = ({ data }) => {
   const [searchText, setSearchText] = useState('');
@@ -41,6 +42,10 @@ const TreeContainer = ({ data }) => {
       />
     </div> 
   );
+}
+
+TreeContainer.propTypes = {
+  data: PropTypes.arrayOf(object).isRequired
 }
 
 export default TreeContainer;

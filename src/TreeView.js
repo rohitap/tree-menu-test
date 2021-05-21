@@ -1,4 +1,5 @@
 import TreeItem from './TreeItem';
+import PropTypes from 'prop-types';
 
 const TreeView = ({ treeData, searchData }) => {
   const getFilterData = (treeData, searchData) => {
@@ -20,6 +21,11 @@ const TreeView = ({ treeData, searchData }) => {
       {getFilterData(treeData, searchData)}
     </ol>  
   )
+}
+
+TreeView.propTypes = {
+  treeData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  searchData: PropTypes.object
 }
 
 export default TreeView;

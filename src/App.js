@@ -1,5 +1,6 @@
 import useTreeData from './hooks/useTreeData';
 import TreeContainer from './TreeContainer';
+import Error from './Error';
 import './App.css';
 
 const App = () => {
@@ -12,10 +13,8 @@ const App = () => {
         ? <div className="loader"></div>
         : <TreeContainer data={data} />
       }
-      {
-        error
-        && <h1>Error occuring while fetching the data</h1>
-      }
+
+      {error && <Error />}
     </div>
   );
 }
